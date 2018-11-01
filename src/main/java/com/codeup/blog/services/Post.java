@@ -3,13 +3,16 @@ package com.codeup.blog.services;
 public class Post {
     private String title;
     private String body;
+    private Long id;
 
     public Post() {
     }
 
+
     public Post(String title, String body) {
         this.title = title;
         this.body = body;
+
     }
 
     public String getTitle() {
@@ -26,5 +29,20 @@ public class Post {
 
     public void setBody(String body) {
         this.body = body;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Post(String title, String body, Long id) {
+        this.title = title;
+        this.body = body;
+        this.id = id;
+
     }
 }
