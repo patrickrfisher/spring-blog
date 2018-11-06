@@ -4,14 +4,20 @@
 <head>
     <div th:replace="fragments/header :: header"></div>
 </head>
+<body>
+<nav>
+    <th:block th:replace="fragments/navbar :: navbar">
 
-<div th:replace="fragments/navbar :: navbar"></div>
+    </th:block>
+    <a th:href="@{'/posts/' + ${post.id}+ '/edit'}">edit post</a>
+</nav>
 <h1>a single post page</h1>
 <div>
     <h2 th:text="${post.title}"></h2>
     <p th:text="${post.body}"></p>
+    <p th:text="${post.user.email}"></p>
 </div>
-
+</body>
 <footer th:replace="fragments/footer :: footer">
 
 </footer>
